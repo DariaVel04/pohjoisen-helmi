@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Työkalut ja Kalusto - Pohjoisen Helmi</title>
+    <meta name="description" data-i18n-content="meta.toolsDescription"
+        content="Tutustu ammattimaisiin siivouskalustoihin ja työkaluihin, joita Pohjoisen Helmi tarjoaa Kuopion alueella myös vuokraukseen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body data-meta-title="meta.toolsTitle">
+
+    <!-- Header Area -->
+    <header class="site-header transparent">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo/logosmall.png" data-i18n-alt="shared.logoAlt" alt="Logo" class="logo-small">
+                <span class="logo-text">Pohjoisen Helmi</span>
+            </a>
+
+            <nav id="primary-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Koti</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" class="active" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-triggers">
+                <div class="header-actions">
+                    <a href="tel:+358400178487" class="btn btn-outline">
+                        <i class="ph ph-phone"></i>
+                        <span data-i18n="nav.getStarted">Aloita</span>
+                    </a>
+                </div>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-toggle" id="lang-toggle" aria-expanded="false"
+                        aria-controls="lang-menu" data-i18n-aria-label="lang.change" aria-haspopup="true"
+                        data-current-lang="FI">
+                        <span class="lang-toggle-mobile" aria-hidden="true">
+                            <i class="ph ph-globe"></i>
+                            <span class="lang-toggle-code">FI</span>
+                        </span>
+                        <span class="lang-toggle-bars" aria-hidden="true">
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                        </span>
+                    </button>
+                    <div id="lang-menu" class="lang-menu" role="menu" hidden>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="fi" data-i18n="lang.fi">Suomi</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="en" data-i18n="lang.en">English</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="ru" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                    data-i18n-aria-label="nav.openMenu" aria-label="Avaa valikko">
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tools Page Hero -->
+    <section class="page-hero" style="background-image: url('images/about_hero_bg.png');">
+        <div class="hero-overlay"></div>
+        <div class="container relative z-10 text-center">
+            <h1 class="page-title" data-i18n="tools.pageTitle">Meidän Työkalut</h1>
+            <div class="breadcrumbs">
+                <a href="index.html" data-i18n="nav.home">Koti</a>
+                <span class="separator">.</span>
+                <span class="current" data-i18n="tools.breadcrumbCurrent">Työkalut</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="tools-intro-section">
+        <div class="container">
+            <div class="section-header text-center animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="tools.introTitle">Ammattimainen Kalusto, Jota Käytämme</h2>
+                <p data-i18n="tools.introSubtitle" data-i18n-html>Investoimme alan johtaviin siivouskalustoihin loistavien tulosten toimittamiseksi. <br>
+                    Monet ammattimaisista koneistamme ovat saatavilla myös vuokraukseen — tee työ oikein.</p>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="tools-stats-strip animate__animated reveal-on-scroll animate__zoomIn">
+                <div class="tools-stat">
+                    <span class="stat-number" data-counter-target="20" data-counter-suffix="+">20+</span>
+                    <span class="stat-label" data-i18n="tools.statTypes">Kalustotyyppiä</span>
+                </div>
+                <div class="tools-stat-divider"></div>
+                <div class="tools-stat">
+                    <span class="stat-number" data-counter-target="15" data-counter-suffix="+">15+</span>
+                    <span class="stat-label" data-i18n="tools.statYears">Vuotta Palvelussa</span>
+                </div>
+                <div class="tools-stat-divider"></div>
+                <div class="tools-stat">
+                    <span class="stat-number" data-counter-target="100" data-counter-suffix="%">100%</span>
+                    <span class="stat-label" data-i18n="tools.statCertified">Sertifioitu & Turvallinen</span>
+                </div>
+                <div class="tools-stat-divider"></div>
+                <div class="tools-stat">
+                    <span class="stat-number" data-i18n="tools.statDaily">Päivittäin</span>
+                    <span class="stat-label" data-i18n="tools.statRental">Vuokraus Saatavilla</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid Section -->
+    <section class="tools-grid-section">
+        <div class="container">
+            <div class="section-header text-center animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="tools.catalogTitle">Kalustojen Luettelo</h2>
+                <p data-i18n="tools.catalogSubtitle">Selaa koko valikoimaamme — raskaisista teollisuuskonekoneista tarkkuuden käsityökaluihin.</p>
+            </div>
+
+            <div class="tools-cards-grid">
+
+                <!-- Tool 1: Industrial Vacuum -->
+                <div class="tool-card animate__animated reveal-on-scroll animate__fadeInLeft"
+                    style="--animate-delay: 0.06s;">
+                    <div class="tool-card-header bg-teal">
+                        <div class="tool-icon-circle">
+                            <i class="ph ph-broom"></i>
+                        </div>
+                        <span class="rental-badge" data-i18n="tools.rentalBadge">Vuokraus Saatavilla</span>
+                    </div>
+                    <div class="tool-card-body">
+                        <h3 data-i18n="tools.tool1Title">Teollinen Pölynimuri</h3>
+                        <p data-i18n="tools.tool1Text">Raskas 3600W märkä- ja kuivapölynimuri HEPA-suodatuksella, täydellinen syvän puhdistuksen
+                            mattoille, verhoille ja kovalle pohjalle suurissa kaupallisissa tiloissa.</p>
+                        <ul class="tool-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool1f1">HEPA H13 Suodatin</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool1f2">80 Litran Säiliö</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool1f3">Märkä- ja Kuivatoiminto</span>
+                            </li>
+                        </ul>
+                        <div class="tool-card-footer">
+                            <div class="rental-price">
+                                <span class="price-from" data-i18n="tools.priceFrom">Alkaen</span>
+                                <span class="price-amount">$45</span>
+                                <span class="price-per" data-i18n="tools.pricePerDay">/päivä</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-blue tool-btn" data-i18n="tools.rentNow">Vuokraa Nyt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Floor Scrubber -->
+                <div class="tool-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.14s;">
+                    <div class="tool-card-header bg-blue">
+                        <div class="tool-icon-circle">
+                            <i class="ph ph-squares-four"></i>
+                        </div>
+                        <span class="rental-badge" data-i18n="tools.rentalBadge">Vuokraus Saatavilla</span>
+                    </div>
+                    <div class="tool-card-body">
+                        <h3 data-i18n="tools.tool2Title">Automaattinen Lattianpyyhkijä</h3>
+                        <p data-i18n="tools.tool2Text">Kävelevä automaattinen lattianpyyhkijä säädettävällä hierontapaineella ja
+                            kuivainjärjestelmällä, ihanteellinen suurille laatta- tai kiilloitetuille betonipinnoille.
+                        </p>
+                        <ul class="tool-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool2f1">50 Litran Liuossäiliö</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool2f2">Säädettävä Hierontapaine</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool2f3">Sisäänrakennettu Kuivain</span>
+                            </li>
+                        </ul>
+                        <div class="tool-card-footer">
+                            <div class="rental-price">
+                                <span class="price-from" data-i18n="tools.priceFrom">Alkaen</span>
+                                <span class="price-amount">$80</span>
+                                <span class="price-per" data-i18n="tools.pricePerDay">/päivä</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-blue tool-btn" data-i18n="tools.rentNow">Vuokraa Nyt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 3: Steam Cleaner -->
+                <div class="tool-card animate__animated reveal-on-scroll animate__fadeInRight"
+                    style="--animate-delay: 0.22s;">
+                    <div class="tool-card-header bg-teal">
+                        <div class="tool-icon-circle">
+                            <i class="ph ph-thermometer"></i>
+                        </div>
+                        <span class="rental-badge" data-i18n="tools.rentalBadge">Vuokraus Saatavilla</span>
+                    </div>
+                    <div class="tool-card-body">
+                        <h3 data-i18n="tools.tool3Title">Kaupallinen Höyrynpuhdistin</h3>
+                        <p data-i18n="tools.tool3Text">Korkeapaineen höyrydesinfiointi joka tappaa 99,9% bakteereista ja viruksista ilman
+                            kemikaaleja.
+                            Loistava keittiöihin, kylpyhuoneisiin ja allergiaherkille ympäristöille.</p>
+                        <ul class="tool-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool3f1">Kemikaaliton Desinfiointi</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool3f2">160°C Höyryn Lämpötila</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool3f3">Useita Liittimiä</span>
+                            </li>
+                        </ul>
+                        <div class="tool-card-footer">
+                            <div class="rental-price">
+                                <span class="price-from" data-i18n="tools.priceFrom">Alkaen</span>
+                                <span class="price-amount">$55</span>
+                                <span class="price-per" data-i18n="tools.pricePerDay">/päivä</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-blue tool-btn" data-i18n="tools.rentNow">Vuokraa Nyt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 4: Pressure Washer -->
+                <div class="tool-card animate__animated reveal-on-scroll animate__fadeInLeft"
+                    style="--animate-delay: 0.3s;">
+                    <div class="tool-card-header bg-blue">
+                        <div class="tool-icon-circle">
+                            <i class="ph ph-drop"></i>
+                        </div>
+                        <span class="rental-badge" data-i18n="tools.rentalBadge">Vuokraus Saatavilla</span>
+                    </div>
+                    <div class="tool-card-body">
+                        <h3 data-i18n="tools.tool4Title">Korkeapainepesuri</h3>
+                        <p data-i18n="tools.tool4Text">3000 PSI:n sähköinen painepesuri ulkopinnoille, ajaville teille, rakennuksen julkisivuille ja
+                            ulkona oleville huonekaluille. Poistaa lian nopeasti ja tehokkaasti.</p>
+                        <ul class="tool-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool4f1">3000 PSI Voima</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool4f2">Säädettävät Suuttimet</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool4f3">15 m Letku Mukana</span>
+                            </li>
+                        </ul>
+                        <div class="tool-card-footer">
+                            <div class="rental-price">
+                                <span class="price-from" data-i18n="tools.priceFrom">Alkaen</span>
+                                <span class="price-amount">$65</span>
+                                <span class="price-per" data-i18n="tools.pricePerDay">/päivä</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-blue tool-btn" data-i18n="tools.rentNow">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 5: Window Cleaning Kit -->
+                <div class="tool-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.38s;">
+                    <div class="tool-card-header bg-teal">
+                        <div class="tool-icon-circle">
+                            <i class="ph ph-square-split-horizontal"></i>
+                        </div>
+                        <span class="rental-badge" data-i18n="tools.rentalBadge">Vuokraus Saatavilla</span>
+                    </div>
+                    <div class="tool-card-body">
+                        <h3 data-i18n="tools.tool5Title">Ammattimainen Ikkunapesukalusto</h3>
+                        <p data-i18n="tools.tool5Text">Täydellinen vesijohto-sauvajärjestelmä raidattomaan ikkunapesuun jopa 12m korkeuteen.
+                            Sisältää
+                            kuivaimet, mikrofibrasiivut ja puhtaan veden suodatusyksikön.</p>
+                        <ul class="tool-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool5f1">Saavuttaa Jopa 12 m</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool5f2">Puhtaan Veden Järjestelmä</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool5f3">Raidaton Lopputulos</span>
+                            </li>
+                        </ul>
+                        <div class="tool-card-footer">
+                            <div class="rental-price">
+                                <span class="price-from" data-i18n="tools.priceFrom">Alkaen</span>
+                                <span class="price-amount">$35</span>
+                                <span class="price-per" data-i18n="tools.pricePerDay">/päivä</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-blue tool-btn" data-i18n="tools.rentNow">Vuokraa Nyt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 6: Carpet Extractor -->
+                <div class="tool-card animate__animated reveal-on-scroll animate__fadeInRight"
+                    style="--animate-delay: 0.46s;">
+                    <div class="tool-card-header bg-blue">
+                        <div class="tool-icon-circle">
+                            <i class="ph ph-diamond"></i>
+                        </div>
+                        <span class="rental-badge" data-i18n="tools.rentalBadge">Vuokraus Saatavilla</span>
+                    </div>
+                    <div class="tool-card-body">
+                        <h3 data-i18n="tools.tool6Title">Maton <span data-i18n="tools.tool6f1">Kuuma-vesiuutto</span></h3>
+                        <p data-i18n="tools.tool6Text">Ammattimainen mattojen uuttokone kuumalla vedellä syvän puhdistuksen mattoille ja mattoille.
+                            Poistaa tahrat, allergeenit ja upotetun lian tehokkaasti.</p>
+                        <ul class="tool-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Kuuma-vesiuutto
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool6f2">Poistaa Syvät Tahrat</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="tools.tool6f3">Nopea Kuivaus -teknologia</span>
+                            </li>
+                        </ul>
+                        <div class="tool-card-footer">
+                            <div class="rental-price">
+                                <span class="price-from" data-i18n="tools.priceFrom">Alkaen</span>
+                                <span class="price-amount">$70</span>
+                                <span class="price-per" data-i18n="tools.pricePerDay">/päivä</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-blue tool-btn" data-i18n="tools.rentNow">Vuokraa Nyt</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Use Our Tools Section -->
+    <section class="tools-why-section">
+        <div class="container">
+            <div class="section-header text-center animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="tools.whyTitle">Miksi Valita Meidän Kalusto</h2>
+                <p data-i18n="tools.whySubtitle">Jokainen kone on huollettu, sertifioitu ja valmis ammattimaiseen käyttöön.</p>
+            </div>
+            <div class="cards-grid why-cards animate__animated reveal-on-scroll animate__fadeInUp">
+                <div class="process-card">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-shield-check stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="tools.why1Title">Sertifioitu & Turvallinen</h3>
+                    <p data-i18n="tools.why1Text">Kaikki kalusto vastaa teollisuuden turvallisuusstandardeja. Jokainen työkalu testataan ennen
+                        vuokrausta varmistamaan
+                        luotettava ja vaara-vapaa toiminta.</p>
+                </div>
+                <div class="process-card">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-clock stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="tools.why2Title">Samanpäiväinen Saatavuus</h3>
+                    <p data-i18n="tools.why2Text">Varaa verkossa tai soita meille ja nouda vuokraus samana päivänä. Joustavat päivittäiset,
+                        viikoittaiset ja viikonlopun
+                        paketit saatavilla.</p>
+                </div>
+                <div class="process-card">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-thumbs-up stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="tools.why3Title">Asiantuntija-apu</h3>
+                    <p data-i18n="tools.why3Text">Etkö ole varma, mitä työkalua valita? Tiimimme tarjoaa käytännöllisen ohjeistuksen ja
+                        käyttöohjeet jokaisen vuokrauksen mukana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Inquiry Form -->
+    <section class="contact-section contact-section--muted">
+        <div class="container contact-container">
+            <div
+                class="section-header text-center section-header--flush animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="tools.rentalFormTitle">Pyydä Vuokrausta</h2>
+                <p data-i18n="tools.rentalFormSubtitle">Täytä alla oleva lomake ja me vahvistamme saatavuuden ja hinnan 2 tunnin sisällä.</p>
+            </div>
+            <div class="contact-form-wrapper animate__animated reveal-on-scroll animate__jackInTheBox">
+                <form action="#" class="contact-form" id="rental-form">
+                    <div class="form-row">
+                        <input type="text" data-i18n-placeholder="tools.rentalName" placeholder="Sinun Nimi" class="form-control" id="rental-name">
+                        <input type="email" data-i18n-placeholder="tools.rentalEmail" placeholder="Sähköpostiosoite" class="form-control" id="rental-email">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" data-i18n-placeholder="tools.rentalPhone" placeholder="Puhelinnumero" class="form-control" id="rental-phone">
+                        <select class="form-control custom-select" id="rental-tool">
+                            <option value="" data-i18n="tools.rentalSelectTool">— Valitse Kalusto —</option>
+                            <option value="vacuum" data-i18n="tools.tool1Title">Teollinen Pölynimuri</option>
+                            <option value="scrubber" data-i18n="tools.tool2Title">Automaattinen Lattianpyyhkijä</option>
+                            <option value="steam" data-i18n="tools.tool3Title">Kaupallinen Höyrynpuhdistin</option>
+                            <option value="pressure" data-i18n="tools.tool4Title">Korkeapainepesuri</option>
+                            <option value="window" data-i18n="tools.tool5Title">Ammattimainen Ikkunapesukalusto</option>
+                            <option value="carpet" data-i18n="tools.tool6Title">Maton Kuuma-vesiuutto</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" data-i18n-placeholder="tools.rentalDateStart" placeholder="Vuokrauksen alkamispäivä (esim. 15. toukokuuta 2026)"
+                            class="form-control" id="rental-date-start">
+                        <input type="text" data-i18n-placeholder="tools.rentalDateEnd" placeholder="Vuokrauksen päättymispäivä (esim. 17. toukokuuta 2026)"
+                            class="form-control" id="rental-date-end">
+                    </div>
+                    <div class="form-row">
+                        <textarea data-i18n-placeholder="tools.rentalNotes" placeholder="Lisähuomautukset tai kysymykset..." class="form-control" rows="4"
+                            id="rental-notes"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-blue" data-i18n="tools.rentalSubmit">Lähetä Vuokrauspyyntö</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-widget widget-about">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="logo/logo-horizontal.png" data-i18n-alt="footer.logoAlt" alt="Pohjoisen Helmi Logo" class="logo-img">
+                </a>
+                <p data-i18n="footer.about">Pohjoisen Helmi tarjoaa luotettavaa ja ammattitaitoista siivouspalvelua Kuopion alueella. Y-tunnus
+                    2250142-0. Maria Hämäläinen. pohjoisenhelmi@gmail.com.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.services">Palvelumme</h4>
+                <ul class="footer-links">
+                    <li><a href="service.html" data-i18n="footer.officeCleaning">Toimistojen Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.homeCleaning">Kodin Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.windowCleaning">Ikkunoiden Pesu</a></li>
+                    <li><a href="service.html" data-i18n="footer.kitchenCleaning">Keittiön Siivous</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.quickLinks">Pikaliitännät</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.contact">Yhteystiedot</h4>
+                <ul class="contact-info-list">
+                    <li>
+                        <a href="https://maps.app.goo.gl/YC4i516oqJZjBrJu7" class="contact-info-link" target="_blank" rel="noreferrer noopener">
+                            <div class="icon-box"><i class="ph ph-map-pin"></i></div>
+                            <span>Kuopio, Suomi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pohjoisenhelmi@gmail.com" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-envelope"></i></div>
+                            <span data-i18n="contact.email">pohjoisenhelmi@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+358400178487" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-phone"></i></div>
+                            <span data-i18n="contact.phone">+358 400 178 487</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p data-i18n="footer.copyright">© 2026 Pohjoisen Helmi - Kaikki oikeudet pidätetty.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

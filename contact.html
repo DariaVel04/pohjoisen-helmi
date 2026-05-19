@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ota Yhteyttä - Pohjoisen Helmi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body data-meta-title="meta.contactTitle">
+
+    <!-- Header Area -->
+    <header class="site-header transparent">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo/logosmall.png" data-i18n-alt="shared.logoAlt" alt="Logo" class="logo-small">
+                <span class="logo-text">Pohjoisen Helmi</span>
+            </a>
+
+            <nav id="primary-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Koti</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-triggers">
+                <div class="header-actions">
+                    <a href="tel:+358400178487" class="btn btn-outline">
+                        <i class="ph ph-phone"></i>
+                        <span data-i18n="nav.getStarted">Aloita</span>
+                    </a>
+                </div>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-toggle" id="lang-toggle" aria-expanded="false"
+                        aria-controls="lang-menu" data-i18n-aria-label="lang.change" aria-haspopup="true"
+                        data-current-lang="FI">
+                        <span class="lang-toggle-mobile" aria-hidden="true">
+                            <i class="ph ph-globe"></i>
+                            <span class="lang-toggle-code">FI</span>
+                        </span>
+                        <span class="lang-toggle-bars" aria-hidden="true">
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                        </span>
+                    </button>
+                    <div id="lang-menu" class="lang-menu" role="menu" hidden>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="fi" data-i18n="lang.fi">Suomi</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="en" data-i18n="lang.en">English</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="ru" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                    data-i18n-aria-label="nav.openMenu" aria-label="Avaa valikko">
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Page Hero -->
+    <section class="page-hero" style="background-image: url('images/about_hero_bg.png');">
+        <div class="hero-overlay"></div>
+        <div class="container relative z-10 text-center">
+            <h1 class="page-title" data-i18n="contactPage.pageTitle">Ota Yhteyttä</h1>
+            <div class="breadcrumbs">
+                <a href="index.html" data-i18n="nav.home">Koti</a>
+                <span class="separator">.</span>
+                <span class="current" data-i18n="contactPage.breadcrumbCurrent">Ota Yhteyttä</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact With Us Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header text-center animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="contactPage.sectionTitle">Ota Yhteyttä Meihin</h2>
+                <p data-i18n="contactPage.sectionSubtitle" data-i18n-html>Ota meihin yhteyttä valitsemallasi tavalla. Vastaamme kaikkiin kyselyihin<br> 24 tunnin sisällä.</p>
+            </div>
+
+            <div class="contact-info-grid">
+                <div class="contact-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.08s;">
+                    <div class="contact-icon-circle">
+                        <i class="ph ph-globe"></i>
+                    </div>
+                    <p><a href="mailto:pohjoisenhelmi@gmail.com" class="contact-action-link" data-i18n="contact.email">pohjoisenhelmi@gmail.com</a></p>
+                    
+                </div>
+
+                <div class="contact-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.18s;">
+                    <div class="contact-icon-circle">
+                        <i class="ph ph-phone"></i>
+                    </div>
+                    <p><a href="tel:+358400178487" class="contact-action-link" data-i18n="contact.phoneLabel">Puh. +358 400 178 487</a></p>
+                    <p data-i18n="contact.quickResponse">Vastaamme nopeasti</p>
+                </div>
+
+                <div class="contact-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.28s;">
+                    <div class="contact-icon-circle">
+                        <i class="ph ph-map-pin"></i>
+                    </div>
+                    <p><a href="https://maps.app.goo.gl/YC4i516oqJZjBrJu7" class="contact-action-link" target="_blank" rel="noreferrer noopener">Kuopio, Suomi</a></p>
+                    <p data-i18n="contact.businessClients">Yrityspalvelut ja rakennusasiakkaat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- appointment form section -->
+    <section class="contact-section contact-section--muted">
+        <div class="container contact-container">
+            <div class="contact-form-wrapper animate__animated reveal-on-scroll animate__jackInTheBox">
+                <form action="#" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" data-i18n-placeholder="form.name" placeholder="Nimi" class="form-control">
+                        <input type="email" data-i18n-placeholder="form.email" placeholder="Sähköposti" class="form-control">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" data-i18n-placeholder="form.phone" placeholder="Puhelin" class="form-control">
+                        <select class="form-control custom-select">
+                            <option value=">—Valitse vaihtoehto—</option>
+                            <option value="home" data-i18n="form.homeCleaning">Kodin Siivous</option>
+                            <option value="office" data-i18n="form.officeCleaning">Toimistosiivous</option>
+                            <option value="commercial" data-i18n="form.commercialCleaning">Kaupallinen Siivous</option>
+                            <option value="building" data-i18n="form.buildingCleaning">Rakennusten Siivous</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <textarea data-i18n-placeholder="form.message" placeholder="Kirjoita viestisi" class="form-control" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-blue" data-i18n="form.submit">Ota Yhteyttä</button>
+                </form>
+                <p style="font-size:0.9rem; margin-top: 1rem; color: #666;" data-i18n="form.privacy">Tietojen käyttö: Lomakkeella antamiasi
+                    tietoja käytetään ainoastaan yhteydenottoa varten. Emme luovuta tietoja kolmansille osapuolille.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-widget widget-about">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="logo/logo-horizontal.png" data-i18n-alt="footer.logoAlt" alt="Pohjoisen Helmi Logo" class="logo-img">
+                </a>
+                <p data-i18n="footer.about">Pohjoisen Helmi tarjoaa luotettavaa ja ammattitaitoista siivouspalvelua Kuopion alueella. Y-tunnus
+                    2250142-0. Maria Hämäläinen. pohjoisenhelmi@gmail.com.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.services">Palvelumme</h4>
+                <ul class="footer-links">
+                    <li><a href="service.html" data-i18n="footer.officeCleaning">Toimistojen Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.homeCleaning">Kodin Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.windowCleaning">Ikkunoiden Pesu</a></li>
+                    <li><a href="service.html" data-i18n="footer.kitchenCleaning">Keittiön Siivous</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.quickLinks">Pikaliitännät</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.contact">Yhteystiedot</h4>
+                <ul class="contact-info-list">
+                    <li>
+                        <a href="https://maps.app.goo.gl/YC4i516oqJZjBrJu7" class="contact-info-link" target="_blank" rel="noreferrer noopener">
+                            <div class="icon-box"><i class="ph ph-map-pin"></i></div>
+                            <span>Kuopio, Suomi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pohjoisenhelmi@gmail.com" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-envelope"></i></div>
+                            <span data-i18n="contact.email">pohjoisenhelmi@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+358400178487" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-phone"></i></div>
+                            <span data-i18n="contact.phone">+358 400 178 487</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p data-i18n="footer.copyright">© 2026 Pohjoisen Helmi - Kaikki oikeudet pidätetty.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

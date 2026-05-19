@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+
+# Agent metadata
+.agents/
+
+# Node artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+*.swp
+*~
+
+# Optional macOS files
+.AppleDouble
+.LSOverride
+
+# Static site cache and temporary files
+*.log

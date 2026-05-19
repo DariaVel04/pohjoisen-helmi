@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pohjoisen Helmi - Puhtaat tilat – Sujuvampi arki ja parempi mieli!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body data-meta-title="meta.indexTitle">
+    <header class="site-header transparent">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="logo/logosmall.png" data-i18n-alt="shared.logoAlt" alt="Logo" class="logo-small">
+                <span class="logo-text">Pohjoisen Helmi</span>
+            </div>
+            <nav id="primary-nav" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active" data-i18n="nav.home">Koti</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </nav>
+            <div class="nav-triggers">
+                <div class="header-actions">
+                    <a href="tel:+358400178487" class="btn btn-outline">
+                        <i class="ph ph-phone"></i>
+                        <span data-i18n="nav.getStarted">Aloita</span>
+                    </a>
+                </div>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-toggle" id="lang-toggle" aria-expanded="false"
+                        aria-controls="lang-menu" data-i18n-aria-label="lang.change" aria-haspopup="true"
+                        data-current-lang="FI">
+                        <span class="lang-toggle-mobile" aria-hidden="true">
+                            <i class="ph ph-globe"></i>
+                            <span class="lang-toggle-code">FI</span>
+                        </span>
+                        <span class="lang-toggle-bars" aria-hidden="true">
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                        </span>
+                    </button>
+                    <div id="lang-menu" class="lang-menu" role="menu" hidden>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="fi"
+                            data-i18n="lang.fi">Suomi</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="en"
+                            data-i18n="lang.en">English</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="ru"
+                            data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                    data-i18n-aria-label="nav.openMenu" aria-label="Avaa valikko">
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-bg-shapes">
+            <!-- Pure CSS shapes or raw SVGs based on screenshot -->
+            <div class="shape shape-zigzag">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <path d="M0 10 L 10 0 L 20 10 L 30 0 L 40 10" stroke="rgba(255,255,255,0.15)" stroke-width="3"
+                        fill="none" stroke-linejoin="round" stroke-linecap="round" />
+                    <path d="M0 16 L 10 6 L 20 16 L 30 6 L 40 16" stroke="rgba(255,255,255,0.15)" stroke-width="3"
+                        fill="none" stroke-linejoin="round" stroke-linecap="round" />
+                    <path d="M0 22 L 10 12 L 20 22 L 30 12 L 40 22" stroke="rgba(255,255,255,0.15)" stroke-width="3"
+                        fill="none" stroke-linejoin="round" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <div class="shape shape-wiper">
+                <!-- Wiper from icon.svg (just visual shape matching screenshot) -->
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)"
+                    stroke-width="1.5">
+                    <path d="M5 22h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path>
+                    <path d="M12 2v20"></path>
+                    <path d="M3 10h18"></path>
+                </svg>
+            </div>
+
+            <div class="shape shape-spray">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)"
+                    stroke-width="1.5">
+                    <path d="M3 21v-8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8H3z"></path>
+                    <path d="M11 3h2v5h-2z"></path>
+                    <path d="M8 8h8"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 data-i18n="index.heroTitle" data-i18n-html>Luotettava siivouspalvelu<br>Kuopion alueella<br></h1>
+                <p data-i18n="index.heroSubtitle" data-i18n-html>Puhtaat tilat – Sujuvampi arki ja parempi mieli!<br>Pohjoisen Helmen palvelut yrityksille ja
+                    rakentamisen ammattilaisille Kuopiossa.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <span data-i18n="index.heroCtaContact">Ota Yhteyttä</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                    <a href="/service.html" class="btn btn-outline-white">
+                        <span data-i18n="index.heroCtaServices">Palvelumme</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="bg-lines"></div>
+                <img src="images/banner1.png" data-i18n-alt="index.heroImageAlt" alt="Cleaning Professional">
+            </div>
+        </div>
+    </main>
+
+    <section class="working-process">
+        <div class="container wp-container">
+            <div class="section-header animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="index.servicesTitle">Meidän Palvelut</h2>
+                <p data-i18n="index.servicesSubtitle" data-i18n-html>Pohjoisen Helmi tarjoaa luotettavaa ja ammattitaitosta siivouspalvelua<br> Kuopion alueella
+                    yksityisille ja yrityksille.</p>
+            </div>
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="process-card animate__animated reveal-on-scroll animate__fadeInUp"
+                    style="--animate-delay: 0.05s;">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-calendar-blank stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="index.card1Title">Ammattitaito</h3>
+                    <p data-i18n="index.card1Text">Käytämme ammattilaisille tarkoitettuja siivousaineita, oikeita menetelmiä ja työvälineitä.
+                    </p>
+                </div>
+                <div class="process-card animate__animated reveal-on-scroll animate__fadeInUp"
+                    style="--animate-delay: 0.15s;">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-broom stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="index.card2Title">Täsmällisyys</h3>
+                    <p data-i18n="index.card2Text">Pysymme aina sovittuihin aikatauluihin ja toimitamme palvelun sovitusti.</p>
+                </div>
+                <div class="process-card animate__animated reveal-on-scroll animate__flipInX"
+                    style="--animate-delay: 0.25s;">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-shield-check stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="index.card3Title">Luotettavuus</h3>
+                    <p data-i18n="index.card3Text">Olemme rehellisiä, oman sanamme pitäviä ja työn jälki puhdasta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="protection-section">
+        <div class="container ps-container">
+            <div class="ps-image-block animate__animated reveal-on-scroll animate__fadeInLeftBig">
+                <img src="images/protection.png" data-i18n-alt="index.protectionImageAlt" alt="Protection Team">
+            </div>
+            <div class="ps-content-block animate__animated reveal-on-scroll animate__fadeInRightBig">
+                <h2 data-i18n="index.protectionTitle" data-i18n-html>Suojaamme Terveyttä<br>Haitallisista Allergeeneista</h2>
+                <p data-i18n="index.protectionText">Palvelumme ylittävät perustason siivouspalvelut ja tarjoavat sinulle kattavan puhtauden, joka
+                    antaa elämään uutta energiaa.</p>
+                <ul class="check-list">
+                    <li>
+                        <i class="ph ph-check-circle check-icon"></i>
+                        <span data-i18n="index.check1">Päivittäinen toimistojen siivous monille toimistotyypeille</span>
+                    </li>
+                    <li>
+                        <i class="ph ph-check-circle check-icon"></i>
+                        <span data-i18n="index.check2">Mattojen puhdistus ja lattioiden kunnossapito</span>
+                    </li>
+                    <li>
+                        <i class="ph ph-check-circle check-icon"></i>
+                        <span data-i18n="index.check3">Päivittäinen kodin ja ikkunoiden pesu</span>
+                    </li>
+                    <li>
+                        <i class="ph ph-check-circle check-icon"></i>
+                        <span data-i18n="index.check4">Bakteerit, virukset, patogeenit ja hajut poistetaan</span>
+                    </li>
+                    <li>
+                        <i class="ph ph-check-circle check-icon"></i>
+                        <span data-i18n="index.check5">Ystävällinen 24/7 asiakaspalvelu</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="protection-measures">
+        <div class="pm-bg-shape">
+            <svg viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="50"></circle>
+                <line x1="100" y1="50" x2="100" y2="20" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+                </line>
+                <line x1="100" y1="150" x2="100" y2="180" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+                </line>
+                <line x1="50" y1="100" x2="20" y2="100" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+                </line>
+                <line x1="150" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+                </line>
+                <line x1="64.6" y1="64.6" x2="43.4" y2="43.4" stroke="currentColor" stroke-width="8"
+                    stroke-linecap="round"></line>
+                <line x1="135.4" y1="135.4" x2="156.6" y2="156.6" stroke="currentColor" stroke-width="8"
+                    stroke-linecap="round"></line>
+                <line x1="64.6" y1="135.4" x2="43.4" y2="156.6" stroke="currentColor" stroke-width="8"
+                    stroke-linecap="round"></line>
+                <line x1="135.4" y1="64.6" x2="156.6" y2="43.4" stroke="currentColor" stroke-width="8"
+                    stroke-linecap="round"></line>
+                <circle cx="100" cy="20" r="8"></circle>
+                <circle cx="100" cy="180" r="8"></circle>
+                <circle cx="20" cy="100" r="8"></circle>
+                <circle cx="180" cy="100" r="8"></circle>
+                <circle cx="43.4" cy="43.4" r="8"></circle>
+                <circle cx="156.6" cy="156.6" r="8"></circle>
+                <circle cx="43.4" cy="156.6" r="8"></circle>
+                <circle cx="156.6" cy="43.4" r="8"></circle>
+            </svg>
+        </div>
+        <div class="container pm-container">
+            <div class="section-header white-text animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="index.measuresTitle" data-i18n-html>Varmistamme Suojelun<br>Kun Työskenntelemme.</h2>
+                <p data-i18n="index.measuresSubtitle" data-i18n-html>Ottamme turvallisuuden vakavasti ja noudatamme kaikkia vaatimuksia<br> työskentelyn aikana.</p>
+            </div>
+            <div class="cards-grid measure-cards">
+                <div class="measure-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.05s;">
+                    <div class="measure-icon">
+                        <i class="ph ph-hands-clapping stroke-teal"></i>
+                    </div>
+                    <h3 data-i18n="index.measure1Title">Käsien Pesu</h3>
+                    <p data-i18n="index.measure1Text">Pesemme kädet säännöllisesti turvallisuuden varmistamiseksi.</p>
+                </div>
+                <div class="measure-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.12s;">
+                    <div class="measure-icon">
+                        <i class="ph ph-drop stroke-teal"></i>
+                    </div>
+                    <h3 data-i18n="index.measure2Title">Desinfiointiaineiston Käyttö</h3>
+                    <p data-i18n="index.measure2Text">Käytämme ammattitason aineita ja menetelmiä hygieenisen lopputuloksen varmistamiseksi.</p>
+                </div>
+                <div class="measure-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.2s;">
+                    <div class="measure-icon">
+                        <i class="ph ph-sparkle stroke-teal"></i>
+                    </div>
+                    <h3 data-i18n="index.measure3Title">Käsiä Käytön Jälkeen Puhdistetaan</h3>
+                    <p data-i18n="index.measure3Text">Kädet pestään säännöllisesti turvallisuuden varmistamiseksi.</p>
+                </div>
+                <div class="measure-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.28s;">
+                    <div class="measure-icon">
+                        <i class="ph ph-mask-happy stroke-teal"></i>
+                    </div>
+                    <h3 data-i18n="index.measure4Title">Kasvomaskin Käyttö</h3>
+                    <p data-i18n="index.measure4Text">Käytämme kasvosuojia suojellaksemme asiakkaitamme ja itseämme.</p>
+                </div>
+                <div class="measure-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.36s;">
+                    <div class="measure-icon">
+                        <i class="ph ph-drop-half stroke-teal"></i>
+                    </div>
+                    <h3 data-i18n="index.measure5Title">Puhdista ja Desinfioi</h3>
+                    <p data-i18n="index.measure5Text">Kaikki pinnat puhdistetaan ja desinfioidaan ammattimaisesti.</p>
+                </div>
+                <div class="measure-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.44s;">
+                    <div class="measure-icon">
+                        <i class="ph ph-users stroke-teal"></i>
+                    </div>
+                    <h3 data-i18n="index.measure6Title">Vältä Läheiset Kontaktit</h3>
+                    <p data-i18n="index.measure6Text">Noudatamme sosiaalisen etäisyyden sääntöjä kaikissa tilanteissa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers-section">
+        <div class="container offers-container">
+            <div class="section-header animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="shared.offersTitle">Mitä Tarjoamme</h2>
+                <p data-i18n="shared.offersSubtitle" data-i18n-html>Tarjoamme laajan valikoiman siivouspalveluita, jotka on suunniteltu<br> vastaamaan kaikkiin
+                    vaatimuksiin.</p>
+            </div>
+            <div class="cards-grid offers-cards">
+                <div class="offer-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.08s;">
+                    <div class="offer-image">
+                        <img src="images/service1.png" alt="Toimistojen Siivous">
+                        <div class="offer-icon-badge">
+                            <i class="ph ph-building stroke-teal"></i>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 data-i18n="index.offer1Title">Toimistojen Siivous</h3>
+                        <p data-i18n="index.offer1Text">Tarjoamme ammattimaisesti hoidettuja toimistojen siivouspalveluita, jotka takaavat puhtauden ja
+                            hygieniaa.</p>
+                    </div>
+                </div>
+                <div class="offer-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.18s;">
+                    <div class="offer-image">
+                        <img src="images/service2.png" data-i18n-alt="index.offer2Alt" alt="Kaupallinen Siivous">
+                        <div class="offer-icon-badge">
+                            <i class="ph ph-storefront stroke-teal"></i>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 data-i18n="index.offer2Title">Kaupallinen Siivous</h3>
+                        <p data-i18n="index.offer2Text">Kaupallisten tilojen siivous vaatii erityistä huolella ja ammattitaitoa, jonka me tarjoamme.
+                        </p>
+                    </div>
+                </div>
+                <div class="offer-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.28s;">
+                    <div class="offer-image">
+                        <img src="images/service3.png" data-i18n-alt="index.offer3Alt" alt="Rakennusten Siivous">
+                        <div class="offer-icon-badge">
+                            <i class="ph ph-city stroke-teal"></i>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 data-i18n="index.offer3Title">Rakennusten Siivous</h3>
+                        <p data-i18n="index.offer3Text">Rakennusten perusteellinen siivous vaatii ammattilaisista ja asianmukaista kalustoa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="section-header text-center animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="index.contactTitle">Ota Yhteyttä</h2>
+                <p data-i18n="index.contactSubtitle">Kerro meille tilastasi ja aikataulustasi. Vastaamme nopeasti ja ehdotamme sopivaa siivousratkaisua.
+                </p>
+            </div>
+
+            <div class="contact-form-wrapper animate__animated reveal-on-scroll animate__jackInTheBox">
+                <form action="#" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" data-i18n-placeholder="form.name" placeholder="Nimi" class="form-control">
+                        <input type="email" data-i18n-placeholder="form.email" placeholder="Sähköposti" class="form-control">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" data-i18n-placeholder="form.phone" placeholder="Puhelin" class="form-control">
+                        <select class="form-control custom-select">
+                            <option value="" data-i18n="form.selectOption">—Valitse vaihtoehto—</option>
+                            <option value="home" data-i18n="form.homeCleaning">Kodin Siivous</option>
+                            <option value="office" data-i18n="form.officeCleaning">Toimistojen Siivous</option>
+                            <option value="commercial" data-i18n="form.commercialCleaning">Kaupallinen Siivous</option>
+                            <option value="building" data-i18n="form.buildingCleaning">Rakennusten Siivous</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <textarea data-i18n-placeholder="form.message" placeholder="Kirjoita viestisi" class="form-control" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-blue" data-i18n="form.submit">Ota Yhteyttä</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-widget widget-about">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="logo/logo-horizontal.png" data-i18n-alt="footer.logoAlt" alt="Pohjoisen Helmi Logo" class="logo-img">
+                </a>
+                <p data-i18n="footer.about">Pohjoisen Helmi tarjoaa luotettavaa ja ammattitaitoista siivouspalvelua Kuopion alueella. Y-tunnus
+                    2250142-0. Maria Hämäläinen. pohjoisenhelmi@gmail.com.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.services">Palvelumme</h4>
+                <ul class="footer-links">
+                    <li><a href="service.html" data-i18n="footer.officeCleaning">Toimistojen Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.homeCleaning">Kodin Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.windowCleaning">Ikkunoiden Pesu</a></li>
+                    <li><a href="service.html" data-i18n="footer.kitchenCleaning">Keittiön Siivous</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.quickLinks">Pikaliitännät</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.contact">Yhteystiedot</h4>
+                <ul class="contact-info-list">
+                    <li>
+                        <a href="https://maps.app.goo.gl/YC4i516oqJZjBrJu7" class="contact-info-link" target="_blank" rel="noreferrer noopener">
+                            <div class="icon-box"><i class="ph ph-map-pin"></i></div>
+                            <span>Kuopio, Suomi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pohjoisenhelmi@gmail.com" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-envelope"></i></div>
+                            <span data-i18n="contact.email">pohjoisenhelmi@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+358400178487" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-phone"></i></div>
+                            <span data-i18n="contact.phone">+358 400 178 487</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p data-i18n="footer.copyright">© 2026 Pohjoisen Helmi - Kaikki oikeudet pidätetty.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

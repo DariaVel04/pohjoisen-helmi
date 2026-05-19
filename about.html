@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Tietoa Meistä - Pohjoisen Helmi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body data-meta-title="meta.aboutTitle">
+    <header class="site-header transparent">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo/logosmall.png" data-i18n-alt="shared.logoAlt" alt="Logo" class="logo-small">
+                <span class="logo-text">Pohjoisen Helmi</span>
+            </a>
+            <nav id="primary-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Koti</a></li>
+                    <li><a href="about.html" class="active" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </nav>
+            <div class="nav-triggers">
+                <div class="header-actions">
+                    <a href="tel:+358400178487" class="btn btn-outline-white">
+                        <i class="ph ph-phone"></i>
+                        <span data-i18n="nav.getStarted">Aloita</span>
+                    </a>
+                </div>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-toggle" id="lang-toggle" aria-expanded="false"
+                        aria-controls="lang-menu" data-i18n-aria-label="lang.change" aria-haspopup="true"
+                        data-current-lang="FI">
+                        <span class="lang-toggle-mobile" aria-hidden="true">
+                            <i class="ph ph-globe"></i>
+                            <span class="lang-toggle-code">FI</span>
+                        </span>
+                        <span class="lang-toggle-bars" aria-hidden="true">
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                            <span class="lang-toggle-bar"></span>
+                        </span>
+                    </button>
+                    <div id="lang-menu" class="lang-menu" role="menu" hidden>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="fi" data-i18n="lang.fi">Suomi</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="en" data-i18n="lang.en">English</button>
+                        <button type="button" role="menuitemradio" class="lang-option" data-lang="ru" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                    data-i18n-aria-label="nav.openMenu" aria-label="Avaa valikko">
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/about_hero_bg.png');">
+        <div class="hero-overlay"></div>
+        <div class="container relative z-10 text-center">
+            <h1 class="page-title" data-i18n="about.pageTitle">Tietoa</h1>
+            <div class="breadcrumbs">
+                <a href="index.html" data-i18n="nav.home">Koti</a>
+                <span class="separator">.</span>
+                <span class="current" data-i18n="about.breadcrumbCurrent">Tietoa</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-goal-section">
+        <div class="container goal-container">
+            <div class="goal-images animate__animated reveal-on-scroll animate__backInLeft">
+                <div class="image-box primary-image">
+                    <img src="images/about_one.jpg" data-i18n-alt="about.primaryImageAlt" alt="Cleaning Professional">
+                </div>
+                <div class="image-box secondary-image">
+                    <img src="images/about_two.jpg" data-i18n-alt="about.secondaryImageAlt" alt="Scrubbing Window">
+                </div>
+                <div class="experience-card">
+                    <div class="exp-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                            stroke-width="1.5">
+                            <rect x="14" y="14" width="6" height="8" rx="2" stroke="var(--primary-color)"></rect>
+                            <path d="M17 14v-4a4 4 0 0 0-8 0v8h2"></path>
+                            <path d="M5 22h4"></path>
+                            <path d="M7 22V10"></path>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="about.expYears">15+ vuotta</h4>
+                    <p data-i18n="about.expLabel">Kokemus</p>
+                </div>
+            </div>
+
+            <div class="goal-content animate__animated reveal-on-scroll animate__backInRight">
+                <h2 data-i18n="about.goalTitle" data-i18n-html>Tavoitteemme on varmistaa<br>että tilasi on puhdas.</h2>
+                <p class="goal-desc" data-i18n="about.goalDesc">Pohjoisen Helmi tarjoaa luotettavaa ja ammattitaitoista siivouspalvelua Kuopion
+                    alueella. Olemme erikoistuneet rakennus- ja loppusiivouksiin, ylläpitosiivouksiin sekä
+                    muuttosiivouksiin.</p>
+
+                <ul class="goal-features">
+                    <li>
+                        <div class="feature-icon bg-primary"><i class="ph ph-calendar-blank"></i>
+                        </div>
+                        <span data-i18n="about.feature1">Rakennus- ja loppusiivous</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon bg-primary"><i class="ph ph-smiley"></i>
+                        </div>
+                        <span data-i18n="about.feature2">Yritysten ja toimistojen siivous</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon bg-primary"><i class="ph ph-leaf"></i></div>
+                        <span data-i18n="about.feature3">Muuttosiivous ja tilojen loppusiivous</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon bg-primary"><i class="ph ph-tag"></i></div>
+                        <span data-i18n="about.feature4">Joustavat aikataulut ja tilaustyöt</span>
+                    </li>
+                </ul>
+
+                <div class="goal-actions">
+                    <a href="service.html" class="btn btn-secondary">
+                        <span data-i18n="about.ctaServices">Palvelut</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                    <a href="tel:+358400178487" class="ps-phone goal-phone contact-phone-link">
+                        <div class="phone-icon-wrapper outline">
+                            <i class="ph ph-phone stroke-blue"></i>
+                        </div>
+                        <span class="phone-number text-dark" data-i18n="contact.phone">+358 400 178 487</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="working-process">
+        <div class="container wp-container">
+            <div class="section-header animate__animated reveal-on-scroll animate__fadeInDown">
+                <h2 data-i18n="about.processTitle">Meidän Työprosessi</h2>
+                <p data-i18n="about.processSubtitle" data-i18n-html>Tarjoamme yksinkertaisen ja tehokkaan prosessin, jonka avulla saat<br> puhtaan ja hyvinvoivan tilasi
+                    ilman vaivaa.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="process-card animate__animated reveal-on-scroll animate__zoomIn"
+                    style="--animate-delay: 0.08s;">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-calendar-blank stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="about.step1Title">Varaus Verkossa</h3>
+                    <p data-i18n="about.step1Text">Varaa palvelusi helposti verkossa muutamassa minuutissa.
+                    </p>
+                </div>
+                <div class="process-card animate__animated reveal-on-scroll animate__fadeInUp"
+                    style="--animate-delay: 0.18s;">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-broom stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="about.step2Title">Siivous Huolella</h3>
+                    <p data-i18n="about.step2Text">Ammattilaiset siivouspalvelumme takaavat parhaat tulokset ja yksityisyyden kunnioituksen.
+                    </p>
+                </div>
+                <div class="process-card animate__animated reveal-on-scroll animate__flipInY"
+                    style="--animate-delay: 0.28s;">
+                    <div class="card-icon-wrapper">
+                        <i class="ph ph-smiley stroke-blue"></i>
+                    </div>
+                    <h3 data-i18n="about.step3Title">Valmiit tilat</h3>
+                    <p data-i18n="about.step3Text">Varmistamme, että toimitilat ja rakennuskohteet ovat käyttövalmiit ja siistit sovitussa
+                        aikataulussa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-widget widget-about">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="logo/logo-horizontal.png" data-i18n-alt="footer.logoAlt" alt="Pohjoisen Helmi Logo" class="logo-img">
+                </a>
+                <p data-i18n="footer.about">Pohjoisen Helmi tarjoaa luotettavaa ja ammattitaitoista siivouspalvelua Kuopion alueella. Y-tunnus
+                    2250142-0. Maria Hämäläinen. pohjoisenhelmi@gmail.com.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.services">Palvelumme</h4>
+                <ul class="footer-links">
+                    <li><a href="service.html" data-i18n="footer.officeCleaning">Toimistojen Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.homeCleaning">Kodin Siivous</a></li>
+                    <li><a href="service.html" data-i18n="footer.windowCleaning">Ikkunoiden Pesu</a></li>
+                    <li><a href="service.html" data-i18n="footer.kitchenCleaning">Keittiön Siivous</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.quickLinks">Pikaliitännät</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html" data-i18n="nav.about">Tietoa</a></li>
+                    <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
+                    <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h4 class="widget-title" data-i18n="footer.contact">Yhteystiedot</h4>
+                <ul class="contact-info-list">
+                    <li>
+                        <a href="https://maps.app.goo.gl/YC4i516oqJZjBrJu7" class="contact-info-link" target="_blank" rel="noreferrer noopener">
+                            <div class="icon-box"><i class="ph ph-map-pin"></i></div>
+                            <span>Kuopio, Suomi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pohjoisenhelmi@gmail.com" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-envelope"></i></div>
+                            <span data-i18n="contact.email">pohjoisenhelmi@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+358400178487" class="contact-info-link">
+                            <div class="icon-box"><i class="ph ph-phone"></i></div>
+                            <span data-i18n="contact.phone">+358 400 178 487</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p data-i18n="footer.copyright">© 2026 Pohjoisen Helmi - Kaikki oikeudet pidätetty.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
