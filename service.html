@@ -4,6 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="site-base-url" content="">
+    <meta name="description" data-i18n-content="meta.servicesDescription"
+        content="Toimisto-, kauppa- ja rakennussiivous Kuopion alueella. Ammattitaitoinen Pohjoisen Helmi palvelee yrityksiä.">
+    <link rel="canonical" href="service.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pohjoisen Helmi">
+    <meta property="og:title" data-i18n-content="meta.servicesTitle" content="Palvelut - Pohjoisen Helmi">
+    <meta property="og:description" data-i18n-content="meta.servicesDescription"
+        content="Toimisto-, kauppa- ja rakennussiivous Kuopion alueella. Ammattitaitoinen Pohjoisen Helmi palvelee yrityksiä.">
+    <meta property="og:image" id="og-image" content="images/vacuum-construction.jpeg">
+    <meta property="og:image:alt" data-i18n-content="meta.ogImageAlt"
+        content="Pohjoisen Helmi – siivouspalvelu Kuopiossa">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:locale" id="og-locale" content="fi_FI">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n-content="meta.servicesTitle" content="Palvelut - Pohjoisen Helmi">
+    <meta name="twitter:description" data-i18n-content="meta.servicesDescription"
+        content="Toimisto-, kauppa- ja rakennussiivous Kuopion alueella. Ammattitaitoinen Pohjoisen Helmi palvelee yrityksiä.">
+    <meta name="twitter:image" id="twitter-image" content="images/vacuum-construction.jpeg">
+    <script src="site-meta.js"></script>
     <title>Palvelut - Pohjoisen Helmi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,11 +166,20 @@
             <div class="contact-form-wrapper animate__animated reveal-on-scroll animate__jackInTheBox">
                 <form action="#" class="contact-form">
                     <div class="form-row">
-                        <input type="text" data-i18n-placeholder="form.name" placeholder="Nimi" class="form-control">
-                        <input type="email" data-i18n-placeholder="form.email" placeholder="Sähköposti" class="form-control">
+                        <div class="form-field form-field--required">
+                            <input type="text" name="name" required aria-required="true" data-i18n-placeholder="form.name" placeholder="Nimi" class="form-control">
+                            <span class="field-error" role="alert" hidden data-i18n="form.nameRequired">Nimi on pakollinen.</span>
+                        </div>
+                        <div class="form-field form-field--required">
+                            <input type="email" name="email" required aria-required="true" data-i18n-placeholder="form.email" placeholder="Sähköposti" class="form-control">
+                            <span class="field-error" role="alert" hidden data-i18n="form.emailRequired">Sähköposti on pakollinen.</span>
+                        </div>
                     </div>
                     <div class="form-row">
-                        <input type="tel" data-i18n-placeholder="form.phone" placeholder="Puhelin" class="form-control">
+                        <div class="form-field form-field--required">
+                            <input type="tel" name="phone" required aria-required="true" data-i18n-placeholder="form.phone" placeholder="Puhelin" class="form-control">
+                            <span class="field-error" role="alert" hidden data-i18n="form.phoneRequired">Puhelin on pakollinen.</span>
+                        </div>
                         <select class="form-control custom-select">
                             <option value=">—Valitse vaihtoehto—</option>
                             <option value="home" data-i18n="form.homeCleaning">Kodin Siivous</option>
@@ -159,6 +190,19 @@
                     </div>
                     <div class="form-row">
                         <textarea data-i18n-placeholder="form.message" placeholder="Kirjoita viestisi" class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="form-row form-checkbox-row">
+                        <div class="privacy-consent">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="privacy" class="form-checkbox-input" aria-required="true">
+                                <span class="form-checkbox-custom" aria-hidden="true"></span>
+                                <span class="form-checkbox-text" data-i18n="privacy.checkboxLabel" data-i18n-html>Hyväksyn <a href="privacy-policy.html" target="_blank">tietosuojakäytännön</a></span>
+                            </label>
+                            <div class="privacy-error" id="privacyError" role="alert" hidden>
+                                <i class="ph ph-warning-circle" aria-hidden="true"></i>
+                                <span data-i18n="form.privacyTickRequired">Valitse tämä ruutu jatkaaksesi.</span>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-blue" data-i18n="form.submit">Ota Yhteyttä</button>
                 </form>
@@ -200,6 +244,7 @@
                     <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
                     <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
                     <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                    <li><a href="privacy-policy.html" data-i18n="privacy.pageTitle">Tietosuojakäytäntö</a></li>
                 </ul>
             </div>
 

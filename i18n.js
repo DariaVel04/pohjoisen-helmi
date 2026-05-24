@@ -78,12 +78,10 @@
             }
         }
 
-        const metaDesc = document.querySelector('meta[name="description"][data-i18n-content]');
-        if (metaDesc) {
-            const value = resolve(metaDesc.getAttribute('data-i18n-content'));
-            if (value) {
-                metaDesc.setAttribute('content', value);
-            }
+        const ogLocaleMap = { fi: 'fi_FI', en: 'en_US', ru: 'ru_RU' };
+        const ogLocale = document.getElementById('og-locale');
+        if (ogLocale) {
+            ogLocale.setAttribute('content', ogLocaleMap[currentLang] || 'fi_FI');
         }
 
         document.documentElement.lang = currentLang;

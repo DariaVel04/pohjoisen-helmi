@@ -764,6 +764,28 @@ body {
     margin-bottom: 30px;
 }
 
+.form-field {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-control.has-error,
+.form-field.has-error .form-control {
+    border-color: #e57373;
+    background-color: #fff8f8;
+    box-shadow: 0 0 0 3px rgba(229, 115, 115, 0.12);
+}
+
+.field-error {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #c62828;
+    padding-left: 4px;
+}
+
 .form-control {
     flex: 1;
     width: 100%;
@@ -801,6 +823,188 @@ select.custom-select {
 textarea.form-control {
     resize: vertical;
     min-height: 160px;
+}
+
+.form-checkbox-row {
+    margin: 8px 0 24px 0;
+}
+
+.privacy-consent {
+    width: 100%;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.5;
+}
+
+.form-checkbox-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.form-checkbox-custom {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    border: 2px solid #c5d0d8;
+    border-radius: 6px;
+    background: #fff;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-checkbox-custom::after {
+    content: '';
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+    margin-top: -2px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.form-checkbox-input:checked + .form-checkbox-custom {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(12, 155, 116, 0.28);
+}
+
+.form-checkbox-input:checked + .form-checkbox-custom::after {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+}
+
+.form-checkbox-input:focus-visible + .form-checkbox-custom {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.form-checkbox-label:hover .form-checkbox-custom {
+    border-color: var(--primary-color);
+}
+
+.form-checkbox-text {
+    font-size: 15px;
+    color: #4a5568;
+    font-weight: 400;
+}
+
+.form-checkbox-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(12, 155, 116, 0.35);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.form-checkbox-text a:hover {
+    color: #087a5c;
+    border-bottom-color: #087a5c;
+}
+
+.privacy-consent.has-error .form-checkbox-custom {
+    border-color: #e57373;
+    box-shadow: 0 0 0 3px rgba(229, 115, 115, 0.18);
+    animation: privacy-checkbox-shake 0.45s ease;
+}
+
+@keyframes privacy-checkbox-shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+}
+
+.privacy-error {
+    display: none;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 12px;
+    margin-left: 36px;
+    padding: 10px 14px;
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #5d4037;
+    background: #fff8f0;
+    border: 1px solid #ffcc80;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.privacy-error::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 18px;
+    width: 12px;
+    height: 12px;
+    background: #fff8f0;
+    border-left: 1px solid #ffcc80;
+    border-top: 1px solid #ffcc80;
+    transform: rotate(45deg);
+}
+
+.privacy-error .ph {
+    flex-shrink: 0;
+    font-size: 20px;
+    color: #f57c00;
+    margin-top: 1px;
+}
+
+.privacy-consent.has-error .privacy-error {
+    display: flex;
+    animation: privacy-error-in 0.25s ease;
+}
+
+@keyframes privacy-error-in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-error-message {
+    font-size: 14px;
+    color: #d32f2f;
+    margin: 20px 0;
+    padding: 12px 16px;
+    background-color: #ffebee;
+    border-left: 4px solid #d32f2f;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.form-error-message a {
+    color: #d32f2f;
+    text-decoration: underline;
+}
+
+.form-error-message a:hover {
+    color: #b71c1c;
 }
 
 .site-footer .logo-img {
@@ -2691,6 +2895,12 @@ body.nav-open {
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+#services,
+#contact {
+    scroll-margin-top: 96px;
 }
 
 body {
@@ -3066,8 +3276,55 @@ img {
 }
 
 @media (min-width: 993px) {
+    .site-header.transparent {
+        transition:
+            background-color 0.28s ease,
+            box-shadow 0.28s ease,
+            border-color 0.28s ease;
+    }
+
+    .site-header.transparent.is-scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 4px 24px rgba(16, 32, 51, 0.1);
+        border-bottom: 1px solid rgba(16, 32, 51, 0.08);
+    }
+
+    .site-header.transparent.is-scrolled .logo-text,
+    .site-header.transparent.is-scrolled .main-nav a {
+        color: var(--ink);
+    }
+
+    .site-header.transparent.is-scrolled .main-nav a.active {
+        color: var(--secondary-color);
+    }
+
+    .site-header.transparent.is-scrolled .btn-outline,
+    .site-header.transparent.is-scrolled .btn-outline-white {
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+        background: transparent;
+        backdrop-filter: none;
+    }
+
+    .site-header.transparent.is-scrolled .btn-outline:hover,
+    .site-header.transparent.is-scrolled .btn-outline-white:hover {
+        background: var(--secondary-color);
+        color: #fff;
+    }
+
     .site-header.transparent .main-nav a.active {
         color: #ffffff;
+    }
+
+    .site-header.transparent.is-scrolled .main-nav a.active {
+        color: var(--secondary-color);
     }
 }
 
@@ -3079,6 +3336,12 @@ img {
         top: 0;
         background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(16px);
+        transition: box-shadow 0.28s ease;
+    }
+
+    .site-header.transparent.is-scrolled,
+    .site-header.is-scrolled {
+        box-shadow: 0 6px 28px rgba(16, 32, 51, 0.12);
     }
 
     .site-header.transparent .logo-text,
@@ -3132,6 +3395,111 @@ img {
 
 @media (max-width: 768px) {
 
+    /* Fixed (not sticky) — body overflow-x breaks position:sticky on small screens */
+    .site-header.transparent,
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1002;
+        background: linear-gradient(180deg, rgba(8, 25, 38, 0.46), rgba(8, 25, 38, 0));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition:
+            background-color 0.28s ease,
+            box-shadow 0.28s ease,
+            border-color 0.28s ease;
+    }
+
+    .site-header.transparent .logo-text,
+    .site-header.transparent .main-nav a {
+        color: #ffffff;
+    }
+
+    .site-header.transparent .main-nav a.active {
+        color: #ffffff;
+        background: transparent;
+        padding-left: 0;
+    }
+
+    .site-header.transparent .btn-outline,
+    .site-header.transparent .btn-outline-white {
+        border-color: rgba(255, 255, 255, 0.8);
+        color: #ffffff;
+        background: transparent;
+    }
+
+    .site-header.transparent .lang-toggle {
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+    }
+
+    .site-header.transparent .lang-toggle-mobile .ph-globe,
+    .site-header.transparent .lang-toggle-code {
+        color: #ffffff;
+    }
+
+    .site-header.transparent .nav-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .site-header.transparent .nav-toggle-bar {
+        background-color: #ffffff;
+    }
+
+    .site-header.transparent.is-scrolled,
+    .site-header.is-scrolled {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 6px 28px rgba(16, 32, 51, 0.12);
+        border-bottom: 1px solid rgba(16, 32, 51, 0.08);
+    }
+
+    .site-header.transparent.is-scrolled .logo-text,
+    .site-header.transparent.is-scrolled .main-nav a {
+        color: var(--ink);
+    }
+
+    .site-header.transparent.is-scrolled .main-nav a.active {
+        color: var(--secondary-color);
+        background: transparent;
+    }
+
+    .site-header.transparent.is-scrolled .btn-outline,
+    .site-header.transparent.is-scrolled .btn-outline-white {
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+    }
+
+    .site-header.transparent.is-scrolled .btn-outline:hover,
+    .site-header.transparent.is-scrolled .btn-outline-white:hover {
+        background: var(--secondary-color);
+        color: #ffffff;
+    }
+
+    .site-header.transparent.is-scrolled .lang-toggle {
+        background: #ffffff;
+        border: 2px solid var(--secondary-color);
+    }
+
+    .site-header.transparent.is-scrolled .lang-toggle-mobile .ph-globe,
+    .site-header.transparent.is-scrolled .lang-toggle-code {
+        color: var(--secondary-color);
+    }
+
+    .site-header.transparent.is-scrolled .nav-toggle {
+        background: var(--primary-color);
+    }
+
+    .site-header.transparent.is-scrolled .nav-toggle-bar {
+        background-color: #ffffff;
+    }
+
     .section-header h2,
     .ps-content-block h2,
     .goal-content h2 {
@@ -3156,6 +3524,12 @@ img {
 @media (max-width: 576px) {
     .site-header {
         padding: 12px 0;
+    }
+
+    .site-header.transparent,
+    .site-header {
+        position: fixed;
+        top: 0;
     }
 
     .header-actions {
@@ -3234,6 +3608,10 @@ img {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
+    }
+
+    .site-header.transparent {
+        transition: none;
     }
 }
 

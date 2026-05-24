@@ -2,7 +2,68 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollRevealAnimations();
     initToolsStatsCounter();
     initMobileNav();
+    initStickyHeader();
+    initSmoothAnchorScroll();
+    initFormValidation();
 });
+
+function initSmoothAnchorScroll() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth';
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const hash = link.getAttribute('href');
+            if (!hash || hash === '#') {
+                return;
+            }
+
+            const target = document.querySelector(hash);
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const header = document.querySelector('.site-header');
+            const offset = header ? header.getBoundingClientRect().height + 16 : 16;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+            window.scrollTo({ top: Math.max(0, top), behavior: scrollBehavior });
+
+            if (history.pushState) {
+                history.pushState(null, '', hash);
+            } else {
+                window.location.hash = hash;
+            }
+        });
+    });
+}
+
+function initStickyHeader() {
+    const header = document.querySelector('.site-header');
+    if (!header) {
+        return;
+    }
+
+    const threshold = 48;
+    let ticking = false;
+
+    const update = () => {
+        header.classList.toggle('is-scrolled', window.scrollY > threshold);
+        ticking = false;
+    };
+
+    const onScroll = () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(update);
+        }
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
 
 function initMobileNav() {
     const header = document.querySelector('.site-header');
@@ -187,3 +248,138 @@ function initToolsStatsCounter() {
 
     counterObserver.observe(statsStrip);
 }
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function clearFieldError(input) {
+    const field = input.closest('.form-field');
+    const error = field?.querySelector('.field-error');
+    input.classList.remove('has-error');
+    input.setAttribute('aria-invalid', 'false');
+    field?.classList.remove('has-error');
+    if (error) {
+        error.hidden = true;
+    }
+}
+
+function showFieldError(input, errorKey) {
+    const field = input.closest('.form-field');
+    const error = field?.querySelector('.field-error');
+    input.classList.add('has-error');
+    input.setAttribute('aria-invalid', 'true');
+    field?.classList.add('has-error');
+    if (error) {
+        if (errorKey && window.I18n) {
+            const message = window.I18n.t(errorKey);
+            if (message && message !== errorKey) {
+                error.textContent = message;
+            }
+        }
+        error.hidden = false;
+    }
+}
+
+function validateRequiredField(input, { showError = false } = {}) {
+    const value = input.value.trim();
+    const fieldName = input.getAttribute('name');
+
+    if (!value) {
+        const emptyKey = fieldName === 'name'
+            ? 'form.nameRequired'
+            : fieldName === 'email'
+                ? 'form.emailRequired'
+                : fieldName === 'phone'
+                    ? 'form.phoneRequired'
+                    : 'form.required';
+        if (showError) {
+            showFieldError(input, emptyKey);
+        }
+        return false;
+    }
+
+    if (input.type === 'email' && !EMAIL_PATTERN.test(value)) {
+        if (showError) {
+            showFieldError(input, 'form.emailInvalid');
+        }
+        return false;
+    }
+
+    clearFieldError(input);
+    return true;
+}
+
+function validatePrivacyCheckbox(form, { showError = false } = {}) {
+    const privacyCheckbox = form.querySelector('input[name="privacy"][type="checkbox"]');
+    const privacyConsent = form.querySelector('.privacy-consent');
+    const privacyError = form.querySelector('.privacy-error');
+
+    if (!privacyCheckbox || !privacyError) {
+        return true;
+    }
+
+    if (privacyCheckbox.checked) {
+        privacyError.hidden = true;
+        privacyConsent?.classList.remove('has-error');
+        privacyCheckbox.setAttribute('aria-invalid', 'false');
+        return true;
+    }
+
+    if (showError) {
+        privacyError.hidden = false;
+        privacyConsent?.classList.add('has-error');
+        privacyCheckbox.setAttribute('aria-invalid', 'true');
+    }
+    return false;
+}
+
+function initFormValidation() {
+    const forms = document.querySelectorAll('.contact-form');
+
+    forms.forEach((form) => {
+        form.setAttribute('novalidate', '');
+
+        const requiredInputs = form.querySelectorAll('.form-field--required input');
+        const privacyCheckbox = form.querySelector('input[name="privacy"][type="checkbox"]');
+
+        requiredInputs.forEach((input) => {
+            input.addEventListener('input', () => clearFieldError(input));
+            input.addEventListener('blur', () => {
+                validateRequiredField(input, { showError: true });
+            });
+        });
+
+        if (privacyCheckbox) {
+            privacyCheckbox.addEventListener('change', () => {
+                validatePrivacyCheckbox(form, { showError: false });
+            });
+        }
+
+        form.addEventListener('submit', (e) => {
+            let isValid = true;
+            let firstInvalid = null;
+
+            requiredInputs.forEach((input) => {
+                if (!validateRequiredField(input, { showError: true })) {
+                    isValid = false;
+                    if (!firstInvalid) {
+                        firstInvalid = input;
+                    }
+                }
+            });
+
+            if (!validatePrivacyCheckbox(form, { showError: true })) {
+                isValid = false;
+                if (!firstInvalid) {
+                    firstInvalid = privacyCheckbox;
+                }
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+                firstInvalid?.focus({ preventScroll: true });
+                (firstInvalid || form).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    });
+}
+

@@ -1,11 +1,19 @@
 {
   "meta": {
+    "siteName": "Pohjoisen Helmi",
     "indexTitle": "Pohjoisen Helmi - Puhtaat tilat – Sujuvampi arki ja parempi mieli!",
+    "indexDescription": "Pohjoisen Helmi tarjoaa luotettavaa siivouspalvelua Kuopion alueella yrityksille ja rakennusalan ammattilaisille.",
     "aboutTitle": "Tietoa Meistä - Pohjoisen Helmi",
+    "aboutDescription": "Tutustu Pohjoisen Helmeen – luotettavaan siivouspalveluun Kuopiossa yrityksille ja rakennusalan ammattilaisille.",
     "servicesTitle": "Palvelut - Pohjoisen Helmi",
+    "servicesDescription": "Toimisto-, kauppa- ja rakennussiivous Kuopion alueella. Ammattitaitoinen Pohjoisen Helmi palvelee yrityksiä.",
     "contactTitle": "Ota Yhteyttä - Pohjoisen Helmi",
+    "contactDescription": "Ota yhteyttä Pohjoisen Helmeen – vastaamme nopeasti ja ehdotamme sopivaa siivousratkaisua Kuopiossa.",
     "toolsTitle": "Työkalut ja Kalusto - Pohjoisen Helmi",
-    "toolsDescription": "Tutustu ammattimaisiin siivouskalustoihin ja työkaluihin, joita Pohjoisen Helmi tarjoaa Kuopion alueella myös vuokraukseen."
+    "toolsDescription": "Tutustu ammattimaisiin siivouskalustoihin ja työkaluihin, joita Pohjoisen Helmi tarjoaa Kuopion alueella myös vuokraukseen.",
+    "privacyTitle": "Tietosuojakäytäntö - Pohjoisen Helmi",
+    "privacyDescription": "Pohjoisen Helmen tietosuojakäytäntö – miten käsittelemme henkilötietojasi.",
+    "ogImageAlt": "Pohjoisen Helmi – siivouspalvelu Kuopiossa"
   },
   "lang": {
     "change": "Vaihda kieli",
@@ -46,7 +54,14 @@
     "officeCleaning": "Toimistojen Siivous",
     "commercialCleaning": "Kaupallinen Siivous",
     "buildingCleaning": "Rakennussiivous",
-    "privacy": "Tietojen käyttö: Lomakkeella antamiasi tietoja käytetään ainoastaan yhteydenottoa varten. Emme luovuta tietoja kolmansille osapuolille."
+    "privacy": "Tietojen käyttö: Lomakkeella antamiasi tietoja käytetään ainoastaan yhteydenottoa varten. Emme luovuta tietoja kolmansille osapuolille.",
+    "required": "*Pakollinen",
+    "privacyRequired": "Sinun on hyväksyttävä <a href=\"privacy-policy.html\" target=\"_blank\">tietosuojakäytäntö</a> lähettääksesi lomakkeen",
+    "privacyTickRequired": "Valitse tämä ruutu jatkaaksesi.",
+    "nameRequired": "Nimi on pakollinen.",
+    "emailRequired": "Sähköposti on pakollinen.",
+    "phoneRequired": "Puhelin on pakollinen.",
+    "emailInvalid": "Anna kelvollinen sähköpostiosoite."
   },
   "contact": {
     "location": "Kuopio, Suomi",
@@ -218,5 +233,36 @@
     "offer3Text": "Hoida vanhan tai uuden kodin siivous muuton yhteydessä vaivattomasti.",
     "offer3Alt": "Muuttosiivous",
     "logoAlt": "Logo"
+  },
+  "privacy": {
+    "pageTitle": "Tietosuojakäytäntö",
+    "breadcrumbCurrent": "Tietosuojakäytäntö",
+    "introTitle": "Tietosuoja",
+    "introText": "Pohjoisen Helmi arvostaa sinun yksityisyyttäsi. Tämä tietosuojakäytäntö selittää, kuinka keräämme, käytämme ja suojaamme henkilötietojasi.",
+    "collectionTitle": "Tietojen keruu",
+    "collectionText": "Keräämme seuraavia henkilötietoja palvelumme tarjoamiseksi:",
+    "collectionName": "Nimi",
+    "collectionEmail": "Sähköpostiosoite",
+    "collectionPhone": "Puhelinnumero",
+    "collectionMessage": "Viestit ja kyselyt",
+    "collectionService": "Palvelun valinta",
+    "useTitle": "Tietojen käyttö",
+    "useText": "Käytämme keräämiämme tietoja seuraaviin tarkoituksiin:",
+    "useContact": "Yhteydenoton ja palvelun toimittamisen varmistamiseksi",
+    "useResponse": "Vastaukseksi kysymyksiinne ja pyyntöihin",
+    "useService": "Palvelumme parantamiseksi",
+    "useLegal": "Lakisääteisten velvollisuuksien täyttämiseksi",
+    "sharingTitle": "Tietojen jakaminen",
+    "sharingText": "Emme koskaan jaa tai myy henkilötietojasi kolmansille osapuolille ilman suostumustasi. Tiedot säilytetään luottamuksellisina ja käytetään ainoastaan kuvattuihin tarkoituksiin.",
+    "securityTitle": "Tietoturva",
+    "securityText": "Suojaamme henkilötietojasi teknisillä ja hallinnollisilla turvatoimilla. Käytämme SSL-salausta ja muita säilytyspalvelun suojaamiseksi.",
+    "rightsTitle": "Oikeutesi",
+    "rightsText": "Sinulla on oikeus saada, korjata tai poistaa henkilötietosi. Voit myös vastustaa tietojen käsittelyä. Ota meihin yhteyttä osoitteessa pohjoisenhelmi@gmail.com tai soita numeroon +358 400 178 487.",
+    "changesTitle": "Muutokset",
+    "changesText": "Voimme päivittää tätä tietosuojakäytäntöä ajoittain. Merkittävät muutokset ilmoitamme sähköpostitse tai verkkosivulla.",
+    "contactTitle": "Ota yhteyttä",
+    "contactText": "Jos sinulla on kysymyksiä tietosuojastamme, ota meihin yhteyttä:",
+    "lastUpdated": "Päivitetty: Toukokuu 2026",
+    "checkboxLabel": "Hyväksyn <a href=\"privacy-policy.html\" target=\"_blank\">tietosuojakäytännön</a>"
   }
 }

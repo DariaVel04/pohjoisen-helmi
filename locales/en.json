@@ -1,11 +1,19 @@
 {
   "meta": {
+    "siteName": "Pohjoisen Helmi",
     "indexTitle": "Pohjoisen Helmi - Clean spaces – Smoother everyday life and a better mood!",
+    "indexDescription": "Pohjoisen Helmi provides reliable cleaning services in the Kuopio area for businesses and construction professionals.",
     "aboutTitle": "About Us - Pohjoisen Helmi",
+    "aboutDescription": "Learn about Pohjoisen Helmi – trusted cleaning services in Kuopio for businesses and construction professionals.",
     "servicesTitle": "Services - Pohjoisen Helmi",
+    "servicesDescription": "Office, commercial and construction cleaning in Kuopio. Professional cleaning services by Pohjoisen Helmi.",
     "contactTitle": "Contact Us - Pohjoisen Helmi",
+    "contactDescription": "Contact Pohjoisen Helmi – we respond quickly and propose the right cleaning solution in Kuopio.",
     "toolsTitle": "Tools & Equipment - Pohjoisen Helmi",
-    "toolsDescription": "Explore professional cleaning equipment and tools offered by Pohjoisen Helmi in the Kuopio area, also available for rent."
+    "toolsDescription": "Explore professional cleaning equipment and tools offered by Pohjoisen Helmi in the Kuopio area, also available for rent.",
+    "privacyTitle": "Privacy Policy - Pohjoisen Helmi",
+    "privacyDescription": "Pohjoisen Helmi privacy policy – how we handle your personal data.",
+    "ogImageAlt": "Pohjoisen Helmi cleaning services in Kuopio"
   },
   "lang": {
     "change": "Change language",
@@ -46,7 +54,14 @@
     "officeCleaning": "Office Cleaning",
     "commercialCleaning": "Commercial Cleaning",
     "buildingCleaning": "Construction Cleaning",
-    "privacy": "Data use: Information you provide is used only to respond to your inquiry. We do not share data with third parties."
+    "privacy": "Data use: Information you provide is used only to respond to your inquiry. We do not share data with third parties.",
+    "required": "*Required",
+    "privacyRequired": "You must accept the <a href=\"privacy-policy.html\" target=\"_blank\">privacy policy</a> to submit the form",
+    "privacyTickRequired": "Please check this box to proceed.",
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "phoneRequired": "Phone is required.",
+    "emailInvalid": "Please enter a valid email address."
   },
   "contact": {
     "location": "Kuopio, Finland",
@@ -218,5 +233,36 @@
     "offer3Text": "Ease moving stress with thorough cleaning for your old or new home.",
     "offer3Alt": "Move-out Cleaning",
     "logoAlt": "Logo"
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy",
+    "breadcrumbCurrent": "Privacy Policy",
+    "introTitle": "Privacy Protection",
+    "introText": "Pohjoisen Helmi values your privacy. This privacy policy explains how we collect, use, and protect your personal information.",
+    "collectionTitle": "Data Collection",
+    "collectionText": "We collect the following personal information to provide our services:",
+    "collectionName": "Name",
+    "collectionEmail": "Email address",
+    "collectionPhone": "Phone number",
+    "collectionMessage": "Messages and inquiries",
+    "collectionService": "Service selection",
+    "useTitle": "Data Use",
+    "useText": "We use the information we collect for the following purposes:",
+    "useContact": "To contact you and deliver our services",
+    "useResponse": "To respond to your questions and requests",
+    "useService": "To improve our services",
+    "useLegal": "To comply with legal obligations",
+    "sharingTitle": "Data Sharing",
+    "sharingText": "We never share or sell your personal information to third parties without your consent. Your data is kept confidential and used only for the described purposes.",
+    "securityTitle": "Data Security",
+    "securityText": "We protect your personal information with technical and administrative safeguards. We use SSL encryption and other measures to secure our systems.",
+    "rightsTitle": "Your Rights",
+    "rightsText": "You have the right to access, correct, or delete your personal information. You can also object to data processing. Please contact us at pohjoisenhelmi@gmail.com or call +358 400 178 487.",
+    "changesTitle": "Policy Changes",
+    "changesText": "We may update this privacy policy from time to time. We will notify you of significant changes via email or on our website.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have questions about our privacy practices, please contact us:",
+    "lastUpdated": "Last updated: May 2026",
+    "checkboxLabel": "I accept the <a href=\"privacy-policy.html\" target=\"_blank\">privacy policy</a>"
   }
 }

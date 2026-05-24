@@ -4,6 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Set production URL for social previews (optional; falls back to current origin) -->
+    <meta name="site-base-url" content="">
+    <meta name="description" data-i18n-content="meta.indexDescription"
+        content="Pohjoisen Helmi tarjoaa luotettavaa siivouspalvelua Kuopion alueella yrityksille ja rakennusalan ammattilaisille.">
+    <link rel="canonical" href="index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pohjoisen Helmi">
+    <meta property="og:title" data-i18n-content="meta.indexTitle"
+        content="Pohjoisen Helmi - Puhtaat tilat – Sujuvampi arki ja parempi mieli!">
+    <meta property="og:description" data-i18n-content="meta.indexDescription"
+        content="Pohjoisen Helmi tarjoaa luotettavaa siivouspalvelua Kuopion alueella yrityksille ja rakennusalan ammattilaisille.">
+    <meta property="og:image" id="og-image" content="images/banner1.png">
+    <meta property="og:image:alt" data-i18n-content="meta.ogImageAlt"
+        content="Pohjoisen Helmi – siivouspalvelu Kuopiossa">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:locale" id="og-locale" content="fi_FI">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n-content="meta.indexTitle"
+        content="Pohjoisen Helmi - Puhtaat tilat – Sujuvampi arki ja parempi mieli!">
+    <meta name="twitter:description" data-i18n-content="meta.indexDescription"
+        content="Pohjoisen Helmi tarjoaa luotettavaa siivouspalvelua Kuopion alueella yrityksille ja rakennusalan ammattilaisille.">
+    <meta name="twitter:image" id="twitter-image" content="images/banner1.png">
+    <script src="site-meta.js"></script>
     <title>Pohjoisen Helmi - Puhtaat tilat – Sujuvampi arki ja parempi mieli!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -109,11 +134,11 @@
                 <p data-i18n="index.heroSubtitle" data-i18n-html>Puhtaat tilat – Sujuvampi arki ja parempi mieli!<br>Pohjoisen Helmen palvelut yrityksille ja
                     rakentamisen ammattilaisille Kuopiossa.</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">
+                    <a href="#contact" class="btn btn-primary">
                         <span data-i18n="index.heroCtaContact">Ota Yhteyttä</span>
                         <i class="ph ph-arrow-right"></i>
                     </a>
-                    <a href="/service.html" class="btn btn-outline-white">
+                    <a href="#services" class="btn btn-outline-white">
                         <span data-i18n="index.heroCtaServices">Palvelumme</span>
                         <i class="ph ph-arrow-right"></i>
                     </a>
@@ -126,7 +151,7 @@
         </div>
     </main>
 
-    <section class="working-process">
+    <section id="services" class="working-process">
         <div class="container wp-container">
             <div class="section-header animate__animated reveal-on-scroll animate__fadeInDown">
                 <h2 data-i18n="index.servicesTitle">Meidän Palvelut</h2>
@@ -351,11 +376,20 @@
             <div class="contact-form-wrapper animate__animated reveal-on-scroll animate__jackInTheBox">
                 <form action="#" class="contact-form">
                     <div class="form-row">
-                        <input type="text" data-i18n-placeholder="form.name" placeholder="Nimi" class="form-control">
-                        <input type="email" data-i18n-placeholder="form.email" placeholder="Sähköposti" class="form-control">
+                        <div class="form-field form-field--required">
+                            <input type="text" name="name" required aria-required="true" data-i18n-placeholder="form.name" placeholder="Nimi" class="form-control">
+                            <span class="field-error" role="alert" hidden data-i18n="form.nameRequired">Nimi on pakollinen.</span>
+                        </div>
+                        <div class="form-field form-field--required">
+                            <input type="email" name="email" required aria-required="true" data-i18n-placeholder="form.email" placeholder="Sähköposti" class="form-control">
+                            <span class="field-error" role="alert" hidden data-i18n="form.emailRequired">Sähköposti on pakollinen.</span>
+                        </div>
                     </div>
                     <div class="form-row">
-                        <input type="tel" data-i18n-placeholder="form.phone" placeholder="Puhelin" class="form-control">
+                        <div class="form-field form-field--required">
+                            <input type="tel" name="phone" required aria-required="true" data-i18n-placeholder="form.phone" placeholder="Puhelin" class="form-control">
+                            <span class="field-error" role="alert" hidden data-i18n="form.phoneRequired">Puhelin on pakollinen.</span>
+                        </div>
                         <select class="form-control custom-select">
                             <option value="" data-i18n="form.selectOption">—Valitse vaihtoehto—</option>
                             <option value="home" data-i18n="form.homeCleaning">Kodin Siivous</option>
@@ -366,6 +400,19 @@
                     </div>
                     <div class="form-row">
                         <textarea data-i18n-placeholder="form.message" placeholder="Kirjoita viestisi" class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="form-row form-checkbox-row">
+                        <div class="privacy-consent">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="privacy" class="form-checkbox-input" aria-required="true">
+                                <span class="form-checkbox-custom" aria-hidden="true"></span>
+                                <span class="form-checkbox-text" data-i18n="privacy.checkboxLabel" data-i18n-html>Hyväksyn <a href="privacy-policy.html" target="_blank">tietosuojakäytännön</a></span>
+                            </label>
+                            <div class="privacy-error" id="privacyError" role="alert" hidden>
+                                <i class="ph ph-warning-circle" aria-hidden="true"></i>
+                                <span data-i18n="form.privacyTickRequired">Valitse tämä ruutu jatkaaksesi.</span>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-blue" data-i18n="form.submit">Ota Yhteyttä</button>
                 </form>
@@ -407,6 +454,7 @@
                     <li><a href="service.html" data-i18n="nav.services">Palvelut</a></li>
                     <li><a href="tools.html" data-i18n="nav.tools">Työkalut</a></li>
                     <li><a href="contact.html" data-i18n="nav.contact">Ota Yhteyttä</a></li>
+                    <li><a href="privacy-policy.html" data-i18n="privacy.pageTitle">Tietosuojakäytäntö</a></li>
                 </ul>
             </div>
 
