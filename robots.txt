@@ -1,0 +1,5 @@
+# Pohjoisen Helmi — update Sitemap URL to your live domain if different
+User-agent: *
+Allow: /
+
+Sitemap: https://pohjoisenhelmi.fi/sitemap.xml
